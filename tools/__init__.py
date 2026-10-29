@@ -1,4 +1,4 @@
-"""Tool registry. To add a tool: subclass Tool in a new file, then add it to build_tools()."""
+"""Tool registry for AgriSenseAI."""
 
 
 class Tool:
@@ -12,7 +12,17 @@ class Tool:
 
 def build_tools():
     from tools.calculator import Calculator
-    from tools.data_query import ListFiles, ReadFile, SqlQuery
+    from tools.crop_stress import CropStress
+    from tools.data_query import ListFiles, ReadFile, SQLQuery
     from tools.web_search import WebSearch
-    tools = [ListFiles(), ReadFile(), SqlQuery(), Calculator(), WebSearch()]
-    return {t.name: t for t in tools}
+
+    tools = [
+        Calculator(),
+        WebSearch(),
+        CropStress(),
+        ListFiles(),
+        ReadFile(),
+        SQLQuery(),
+    ]
+
+    return {tool.name: tool for tool in tools}
