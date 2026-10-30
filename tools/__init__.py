@@ -16,6 +16,7 @@ def build_tools():
     from tools.data_query import ListFiles, ReadFile, SQLQuery
     from tools.web_search import WebSearch
     from tools.soil_analysis import SoilAnalysis
+    from tools.irrigation import IrrigationAnalysis
 
     tools = [
         Calculator(),
@@ -25,6 +26,7 @@ def build_tools():
         ReadFile(),
         SQLQuery(),
         SoilAnalysis(),
+        IrrigationAnalysis(),
     ]
 
     return {tool.name: tool for tool in tools}

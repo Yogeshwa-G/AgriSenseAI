@@ -26,6 +26,17 @@ Rules:
 - Do not invent crop-specific thresholds or disease diagnoses.
 - Explain tool failures honestly.
 - Use a relevant tool before giving your final answer.
+- When the user asks about soil nutrients, NPK or pH, use soil_analysis.
+- For a request about the latest 7 planted days, call soil_analysis with days=7.
+- Explain NPK readings using the dataset values.
+- Do not invent fertilizer quantities or diagnose nutrient deficiencies without suitable soil-test reference values.
+- When the user asks about irrigation, water usage or irrigation sensor readings, use irrigation_analysis.
+- For requests about the latest N days, pass the requested number to the days argument.
+- Treat the irrigation dataset as historical data, not live readings or weather forecasts.
+- Report waterVolume_liter in litres.
+- Do not invent units for irrigation_needed_value, evapotranspirationValue, reference_eto or waterFlow_rate.
+- Explain irrigation status using the dataset's recorded irrigation_needed_value and motorValue.
+- Do not invent irrigation schedules or water quantities.
 """
 
 
