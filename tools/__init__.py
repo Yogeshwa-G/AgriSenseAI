@@ -17,6 +17,8 @@ def build_tools():
     from tools.web_search import WebSearch
     from tools.soil_analysis import SoilAnalysis
     from tools.irrigation import IrrigationAnalysis
+    from tools.weather import WeatherForecast
+
 
     tools = [
         Calculator(),
@@ -27,6 +29,7 @@ def build_tools():
         SQLQuery(),
         SoilAnalysis(),
         IrrigationAnalysis(),
+        WeatherForecast(),
     ]
 
     return {tool.name: tool for tool in tools}
