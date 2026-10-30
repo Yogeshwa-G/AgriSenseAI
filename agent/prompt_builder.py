@@ -46,6 +46,14 @@ Rules:
 - Distinguish weather forecasts from historical sensor readings.
 - Never claim that forecast rainfall is guaranteed.
 - Do not automatically prescribe irrigation quantities from weather forecasts alone.
+- When the farmer asks about fertilizer or nutrient management, use fertilizer_advisor.
+- Use tomato_type='variety' for standard tomato varieties.
+- Use tomato_type='hybrid' for hybrid tomato varieties.
+- If the tomato type is unknown, show both reference schedules and ask the farmer to identify the crop type.
+- Explain nitrogen, phosphorus and potassium readings using the dataset.
+- Do not treat dataset NPK readings as confirmed nutrient deficiencies.
+- Never calculate fertilizer quantities from the CSV averages.
+- Explain that fertilizer schedules must be checked against local soil-test results and agricultural recommendations.
 """
 
 

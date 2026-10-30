@@ -18,6 +18,7 @@ def build_tools():
     from tools.soil_analysis import SoilAnalysis
     from tools.irrigation import IrrigationAnalysis
     from tools.weather import WeatherForecast
+    from tools.fertilizer import FertilizerAdvisor
 
 
     tools = [
@@ -30,6 +31,7 @@ def build_tools():
         SoilAnalysis(),
         IrrigationAnalysis(),
         WeatherForecast(),
+        FertilizerAdvisor(),
     ]
 
     return {tool.name: tool for tool in tools}
