@@ -15,6 +15,7 @@ def build_tools():
     from tools.crop_stress import CropStress
     from tools.data_query import ListFiles, ReadFile, SQLQuery
     from tools.web_search import WebSearch
+    from tools.soil_analysis import SoilAnalysis
 
     tools = [
         Calculator(),
@@ -23,6 +24,7 @@ def build_tools():
         ListFiles(),
         ReadFile(),
         SQLQuery(),
+        SoilAnalysis(),
     ]
 
     return {tool.name: tool for tool in tools}
